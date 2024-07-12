@@ -56,7 +56,6 @@ class _VideoInfoState extends State<VideoInfo> {
       _videoTime = "${_curPos}/${_totalPos}";
     });
     print("当前位置${_curPos}，全部${_totalPos}");
-    //如果当前位置是最后的位置就跳到下一个
     if (curPosition.toString() != "0:00:00.000000" &&
         curPosition == totalPosition) {
       setState(() {
