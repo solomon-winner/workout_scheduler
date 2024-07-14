@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold (
       backgroundColor: color.AppColor.homePageBackground,
       body: Container(
-        padding: const EdgeInsets.only(top:70, left:30),
+        padding: const EdgeInsets.only(top:70, left:30,right: 30),
         child: Column(
           children: [
             Row(
@@ -28,8 +28,8 @@ class _HomePageState extends State<HomePage> {
                 fontWeight: FontWeight.w700,
               ),
             ),
-            Expanded(child: Container(
-            child: Row(
+            Expanded(child: Container()),
+             Row(
               children: [
                 Icon(
                   Icons.arrow_back_ios,
@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
-            ))                
+                           
            ],
           )
 
