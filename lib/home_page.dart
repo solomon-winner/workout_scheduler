@@ -14,6 +14,24 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold (
       backgroundColor: color.AppColor.homePageBackground,
-    );
-  }
-}
+      body: Container(
+        child: Column(
+          children: [
+            Row(
+              children: [
+            Text(
+              "Training",
+              style: TextStyle(
+                fontSize: 30,
+                color: color.AppColor.homePageTitle
+              ),
+            )                
+           ],
+          )
+
+        ],
+      ),
+    ),
+  );
+ }
+ }
