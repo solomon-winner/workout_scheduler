@@ -51,7 +51,25 @@ class _HomePageState extends State<HomePage> {
                            
            ],
           )
-
+       , Row(
+          children: [
+            Text(
+             style: TextStyle(
+                fontWeight:FontWeight.w700,
+             fontSize: 20,
+             color: color.AppColor.homePageTitle,
+              ),
+              "Your Program",
+ 
+            ),
+            Expanded(child: Container()),
+            Text(
+              "Details",
+              
+            ),
+            Icon(Icons.arrow_forward)
+          ],
+        ),
         ],
       ),
     ),
