@@ -99,13 +99,59 @@ class _HomePageState extends State<HomePage> {
               ),
               boxShadow: [
                 BoxShadow(
-                  offset: Offset(10, 10),
-                  blurRadius: 20,
+                  offset: Offset(5, 10),
+                  blurRadius: 10,
                   color: color.AppColor.gradientSecond.withOpacity(0.2),
                 )
               ]
               ),
-            )
+           child: Container(
+            padding: const EdgeInsets.only(
+              left: 20,
+              top: 25,
+               ),
+             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Next Workout",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: color.AppColor.homePageContainerTextSmall,
+                  ),
+                ),
+                SizedBox(height: 5,),
+                 Text(
+                  "Legs Toning",
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: color.AppColor.homePageContainerTextSmall,
+                  ),
+                ),
+                SizedBox(height: 5,),
+                 Text(
+                  "and Glutes workout",
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: color.AppColor.homePageContainerTextSmall,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Row(
+                      children:[
+                        Icon(Icons.timer,
+                        size:20,
+                        color: color.AppColor.homePageContainerTextSmall)
+                        ],
+                      ),
+                    
+                  ],
+                )
+              ],
+             ),
+           ),
+           )
         ],
       ),
     ),
