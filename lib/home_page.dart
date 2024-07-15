@@ -50,10 +50,9 @@ class _HomePageState extends State<HomePage> {
             ),
                            
            ],
-          )
-       ,
-       SizedBox(height: 30,),
-        Row(
+          ),
+           SizedBox(height: 30,),
+            Row(
           children: [
             Text(
              style: TextStyle(
@@ -79,6 +78,10 @@ class _HomePageState extends State<HomePage> {
             color: color.AppColor.homePageIcons,)
           ],
         ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              color: Colors.red,
+            )
         ],
       ),
     ),
