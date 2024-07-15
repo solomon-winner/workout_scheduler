@@ -109,6 +109,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.only(
               left: 20,
               top: 25,
+              right: 20
                ),
              child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,9 +137,11 @@ class _HomePageState extends State<HomePage> {
                     color: color.AppColor.homePageContainerTextSmall,
                   ),
                 ),
+                SizedBox(height: 25,),
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.end, 
                   children: [
-                    Row(
+                   Row(
                       children:[
                         Icon(Icons.timer,
                         size:20,
@@ -151,16 +154,15 @@ class _HomePageState extends State<HomePage> {
                     fontSize: 14,
                     color: color.AppColor.homePageContainerTextSmall,
                   ),
-                ),
-                SizedBox(width: 130,),
-                 Icon(
+                ),      
+                ],
+                  ),
+                   Expanded(child: Container()),
+                   Icon(
                   Icons.play_circle_fill,
                   color: Colors.white,
                   size: 60,
-                 )       
-                ],
-                  ),
-                    
+                ),
                 ],
                 )
               ],
