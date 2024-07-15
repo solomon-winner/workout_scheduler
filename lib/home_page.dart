@@ -51,13 +51,15 @@ class _HomePageState extends State<HomePage> {
                            
            ],
           )
-       , Row(
+       ,
+       SizedBox(height: 30,),
+        Row(
           children: [
             Text(
              style: TextStyle(
-                fontWeight:FontWeight.w700,
-             fontSize: 20,
-             color: color.AppColor.homePageTitle,
+              fontWeight:FontWeight.w700,
+              fontSize: 20,
+              color: color.AppColor.homePageSubtitle,
               ),
               "Your Program",
  
