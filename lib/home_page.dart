@@ -82,9 +82,9 @@ class _HomePageState extends State<HomePage> {
            Container(
               width: MediaQuery.of(context).size.width,
               height: 220,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
               color: Colors.red,
-              borderRadius: BorderRadius.only(
+              borderRadius:  BorderRadius.only(
                 topLeft: Radius.circular(10),
                 bottomLeft: Radius.circular(10),
                 bottomRight: Radius.circular(10),
