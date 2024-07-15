@@ -142,11 +142,26 @@ class _HomePageState extends State<HomePage> {
                       children:[
                         Icon(Icons.timer,
                         size:20,
-                        color: color.AppColor.homePageContainerTextSmall)
-                        ],
-                      ),
+                        color: color.AppColor.homePageContainerTextSmall),
+                     SizedBox(width: 10,),
+
+                 Text(
+                  "60min",
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: color.AppColor.homePageContainerTextSmall,
+                  ),
+                ),
+                SizedBox(width: 130,),
+                 Icon(
+                  Icons.play_circle_fill,
+                  color: Colors.white,
+                  size: 60,
+                 )       
+                ],
+                  ),
                     
-                  ],
+                ],
                 )
               ],
              ),
