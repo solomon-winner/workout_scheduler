@@ -78,9 +78,19 @@ class _HomePageState extends State<HomePage> {
             color: color.AppColor.homePageIcons,)
           ],
         ),
-            Container(
+           SizedBox(height: 20,),
+           Container(
               width: MediaQuery.of(context).size.width,
+              height: 220,
+              decoration: BoxDecoration(
               color: Colors.red,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10),
+                bottomLeft: Radius.circular(10),
+                bottomRight: Radius.circular(10),
+                topRight: Radius.circular(80),
+              )
+              ),
             )
         ],
       ),
