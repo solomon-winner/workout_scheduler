@@ -67,9 +67,15 @@ class _HomePageState extends State<HomePage> {
             Expanded(child: Container()),
             Text(
               "Details",
-              
+              style: TextStyle(
+                fontSize: 20,
+                color: color.AppColor.homePageDetail,
+
+              ),
             ),
-            Icon(Icons.arrow_forward)
+            Icon(Icons.arrow_forward,
+            size: 20,
+            color: color.AppColor.homePageIcons,)
           ],
         ),
         ],
