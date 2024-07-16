@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
             _buildSubtitleRow(),
             SizedBox(height: 20),
             _buildWorkoutCard(context),
-             SizedBox(height: 20),
+            //  SizedBox(height: 20),
             _buildOverlapingCard(context),
           ],
         ),
@@ -204,16 +204,18 @@ class _HomePageState extends State<HomePage> {
   }
 
   Container _buildOverlapingCard(BuildContext context) {
+    
     return Container(
       width: MediaQuery.of(context).size.width,
       height:120,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         image: DecorationImage(
-          image: AssetImage("assets\card.jpg"),
+        image: AssetImage("assets/card.jpg"),
           ),
         
       ),
+      
     );
   }
 }
