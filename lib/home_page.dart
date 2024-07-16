@@ -236,7 +236,16 @@ class _HomePageState extends State<HomePage> {
           )
           ,Container(
             height: 200,
-            width: 350,
+            width: MediaQuery.of(context).size.width,
+            margin: const EdgeInsets.only(right: 200, bottom: 30),
+          decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        image: DecorationImage(
+        image: AssetImage("assets/figure.png"),
+         fit: BoxFit.fill
+          ),
+
+      ),
           )
         ],
       ),
