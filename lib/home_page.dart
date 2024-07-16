@@ -250,6 +250,26 @@ class _HomePageState extends State<HomePage> {
             width: double.maxFinite,
             height: 100,
             color: Colors.redAccent.withOpacity(0.3),
+            margin: const EdgeInsets.only(left: 150, top: 50),
+            child: Column(
+              children: [
+                Text(
+                  "You are doing great",
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: color.AppColor.gradientFirst
+                  ),
+                ),
+                SizedBox(height: 5,),
+                Text(
+                  "keep it up"
+                ),
+                Text(
+                  "stick to your plan"
+                )
+
+              ],
+            )
           )
         ],
       ),
