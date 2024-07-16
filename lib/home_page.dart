@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
             _buildSubtitleRow(),
             SizedBox(height: 20),
             _buildWorkoutCard(context),
+             SizedBox(height: 20),
             _buildOverlapingCard(context),
           ],
         ),
