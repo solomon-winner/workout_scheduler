@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
             _buildWorkoutCard(context),
              SizedBox(height: 5),
             _buildOverlapingCard(context),
+            _buildFocusAreaContainer(context),
           ],
         ),
       ),
@@ -249,24 +250,36 @@ class _HomePageState extends State<HomePage> {
           Container (
             width: double.maxFinite,
             height: 100,
-            color: Colors.redAccent.withOpacity(0.3),
+            color: Color.fromARGB(255, 255, 255, 255),
             margin: const EdgeInsets.only(left: 150, top: 50),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   "You are doing great",
                   style: TextStyle(
                     fontSize: 15,
-                    color: color.AppColor.gradientFirst
+                    fontWeight: FontWeight.bold,
+                    color: color.AppColor.homePageDetail
                   ),
                 ),
-                SizedBox(height: 5,),
-                Text(
-                  "keep it up"
+                SizedBox(height: 10,),
+               
+               RichText(
+                text: TextSpan(
+                text: "Keep it Up\n",
+                style: TextStyle(
+                  color: color.AppColor.homePagePlanColor,
+                  fontSize: 16,
+                  
                 ),
-                Text(
-                  "stick to your plan"
-                )
+                children: [
+                  TextSpan(
+                    text:"stick to your plan"
+                  )
+                ]
+               )
+               )
 
               ],
             )
@@ -277,4 +290,12 @@ class _HomePageState extends State<HomePage> {
       
     );
   }
+
+Row _buildFocusAreaContainer (BuildContext context) {
+  return Row(
+    children: [
+      
+    ],
+  );
+}
 }
