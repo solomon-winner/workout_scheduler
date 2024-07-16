@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
             _buildSubtitleRow(),
             SizedBox(height: 20),
             _buildWorkoutCard(context),
+            _buildOverlapingCard(context),
           ],
         ),
       ),
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
           Icons.arrow_back_ios,
           size: 20,
           color: color.AppColor.homePageIcons,
-        ),
+        ), 
         SizedBox(width: 10),
         Icon(
           Icons.calendar_month_outlined,
@@ -176,16 +177,34 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 Expanded(child: Container()),
-                Icon(
-                  Icons.play_circle_fill,
-                  color: Colors.white,
-                  size: 60,
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(60),
+                    boxShadow: [
+                      BoxShadow(
+                        color: color.AppColor.gradientFirst,
+                        blurRadius: 10,
+                        offset: Offset(4, 8)
+                      )
+                    ]
+                  ),
+                  child: Icon(
+                    Icons.play_circle_fill,
+                    color: Colors.white,
+                    size: 60,
+                  ),
                 ),
               ],
             ),
           ],
         ),
       ),
+    );
+  }
+
+  Container _buildOverlapingCard(BuildContext context) {
+    return Container(
+
     );
   }
 }
