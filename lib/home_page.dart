@@ -210,9 +210,7 @@ class _HomePageState extends State<HomePage> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         image: DecorationImage(
-          image: AssetImage(
-            "assets/card.jpg"
-          ),
+          image: AssetImage("assets\card.jpg"),
           ),
         
       ),
