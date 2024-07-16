@@ -242,10 +242,14 @@ class _HomePageState extends State<HomePage> {
         borderRadius: BorderRadius.circular(20),
         image: DecorationImage(
         image: AssetImage("assets/figure.png"),
-         fit: BoxFit.fill
           ),
 
       ),
+          ),
+          Container (
+            width: double.maxFinite,
+            height: 100,
+            color: Colors.redAccent.withOpacity(0.3),
           )
         ],
       ),
