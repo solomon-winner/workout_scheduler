@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
             _buildSubtitleRow(),
             SizedBox(height: 20),
             _buildWorkoutCard(context),
-            //  SizedBox(height: 20),
+             SizedBox(height: 5),
             _buildOverlapingCard(context),
           ],
         ),
@@ -207,14 +207,40 @@ class _HomePageState extends State<HomePage> {
     
     return Container(
       width: MediaQuery.of(context).size.width,
-      height:120,
-      decoration: BoxDecoration(
+      height:180,
+      child: Stack(
+        children: [
+          Container(
+            margin: const EdgeInsets.only(top: 30),
+      width: MediaQuery.of(context).size.width,
+      height:120,    
+        decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         image: DecorationImage(
         image: AssetImage("assets/card.jpg"),
+         fit: BoxFit.fill
           ),
-        
+          boxShadow: [
+            BoxShadow(
+              blurRadius: 40,
+              offset: Offset(8, 10),
+              color: color.AppColor.gradientSecond.withOpacity(0.3)
+            ),
+             BoxShadow(
+              blurRadius: 10,
+              offset: Offset(-1, -5),
+              color: color.AppColor.gradientSecond.withOpacity(0.3)
+            ),   
+          ]
+      ),    
+          )
+          ,Container(
+            height: 200,
+            width: 350,
+          )
+        ],
       ),
+      
       
     );
   }
