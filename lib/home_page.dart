@@ -16,17 +16,20 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: color.AppColor.homePageBackground,
       body: Container(
         padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
-        child: Column(
-          children: [
-            _buildHeaderRow(),
-            SizedBox(height: 30),
-            _buildSubtitleRow(),
-            SizedBox(height: 20),
-            _buildWorkoutCard(context),
-             SizedBox(height: 5),
-            _buildOverlapingCard(context),
-            _buildFocusAreaContainer(context),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              _buildHeaderRow(),
+              SizedBox(height: 30),
+              _buildSubtitleRow(),
+              SizedBox(height: 20),
+              _buildWorkoutCard(context),
+               SizedBox(height: 5),
+              _buildOverlapingCard(context),
+              _buildFocusAreaContainer(context),
+              _buildExpandedContainer(context)
+            ],
+          ),
         ),
       ),
     );
@@ -294,8 +297,38 @@ class _HomePageState extends State<HomePage> {
 Row _buildFocusAreaContainer (BuildContext context) {
   return Row(
     children: [
-      
+      Text(
+        "Area of Focus",
+        style: TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.w500,
+          color: color.AppColor.homePageTitle
+        ),
+      )
     ],
   );
+}
+
+Expanded _buildExpandedContainer(BuildContext context) {
+  return Expanded(
+    child: ListView.builder(
+      itemBuilder: (_, i){
+        return Row(
+          children: [
+            Container(
+              width: 200,
+              height: 170,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                image: DecorationImage(
+                  image: AssetImage("assets/ex1.png")
+                  ),
+              ),
+            )
+          ],
+        );
+      }
+      ),
+      );
 }
 }
