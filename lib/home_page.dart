@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
                SizedBox(height: 5),
               _buildOverlapingCard(context),
               _buildFocusAreaContainer(context),
-              _buildExpandedContainer(context)
+              // _buildExpandedContainer(context)
             ],
           ),
         ),
