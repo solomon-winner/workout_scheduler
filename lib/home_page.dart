@@ -326,7 +326,8 @@ class _HomePageState extends State<HomePage> {
             child: ListView.builder(
               itemCount: (info.length.toDouble()/2).toInt(),
               itemBuilder: (_, i) {
-                  
+                  int a = 2 * i;
+                  int b = 2 * i + 1;
                 return Row(
                   children: [
                     Container(
@@ -338,7 +339,7 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(15),
                         image: DecorationImage(
                           image: AssetImage(
-                            info[i]['img']
+                            info[a]['img']
                           )
                         ),
                         boxShadow: [
@@ -358,7 +359,7 @@ class _HomePageState extends State<HomePage> {
                     child: Align(
                       alignment: Alignment.bottomCenter,
                       child: Text(
-                        info[i]['title'],
+                        info[a]['title'],
                         style: TextStyle(
                           fontSize: 20,
                           color: color.AppColor.homePageDetail
@@ -367,7 +368,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                    ),
                     ),
-                                       Container(
+                    Container(
                       width: 200,
                       height: 170,
                       padding: EdgeInsets.only(bottom: 5),
@@ -376,7 +377,7 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(15),
                         image: DecorationImage(
                           image: AssetImage(
-                            info[i + 1]['img']
+                            info[b]['img']
                           )
                         ),
                         boxShadow: [
@@ -396,7 +397,7 @@ class _HomePageState extends State<HomePage> {
                     child: Align(
                       alignment: Alignment.bottomCenter,
                       child: Text(
-                        info[i + 1]['title'],
+                        info[b]['title'],
                         style: TextStyle(
                           fontSize: 20,
                           color: color.AppColor.homePageDetail
