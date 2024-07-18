@@ -316,6 +316,7 @@ class _HomePageState extends State<HomePage> {
                 Container(
                   width: 200,
                   height: 170,
+                  padding: EdgeInsets.only(bottom: 5),
                   decoration: BoxDecoration (
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -329,10 +330,26 @@ class _HomePageState extends State<HomePage> {
                         blurRadius: 3,
                         offset: Offset(5, 5),
                         color: color.AppColor.gradientSecond.withOpacity(0.1)
+                      ),
+                                       BoxShadow(
+                        blurRadius: 3,
+                        offset: Offset(-5, -5),
+                        color: color.AppColor.gradientSecond.withOpacity(0.1)
                       )
                   ]              
                   ),
-
+               child: Center(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    "glues",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: color.AppColor.homePageDetail
+                    ),
+                  )
+                ),
+               ),
                 )
               ],
             );
