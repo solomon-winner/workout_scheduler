@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'colors.dart' as color;
 class VidioInfo extends StatefulWidget {
   const VidioInfo({super.key});
 
@@ -14,7 +14,12 @@ class _VidioInfoState extends State<VidioInfo> {
     return  Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          
+          gradient: LinearGradient(
+            colors: [
+              color.AppColor.gradientFirst,
+              color.AppColor.gradientSecond
+            ]
+            )
         ),
       ));
   }
