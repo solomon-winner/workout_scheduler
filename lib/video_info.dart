@@ -18,7 +18,9 @@ class _VideoInfoState extends State<VideoInfo> {
             colors: [
               color.AppColor.gradientFirst,
               color.AppColor.gradientSecond
-            ]
+            ],
+            begin: const FractionalOffset(0.0, 0.4),
+            end: Alignment.topRight
             )
         ),
       ));
