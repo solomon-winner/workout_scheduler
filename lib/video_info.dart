@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'colors.dart' as color;
-class VidioInfo extends StatefulWidget {
-  const VidioInfo({super.key});
+class VideoInfo extends StatefulWidget {
+  const VideoInfo({super.key});
 
   @override
-  State<VidioInfo> createState() => _VidioInfoState();
+  State<VideoInfo> createState() => _VideoInfoState();
 }
 
-class _VidioInfoState extends State<VidioInfo> {
+class _VideoInfoState extends State<VideoInfo> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
