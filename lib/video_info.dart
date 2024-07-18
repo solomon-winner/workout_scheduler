@@ -16,7 +16,7 @@ class _VideoInfoState extends State<VideoInfo> {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              color.AppColor.gradientFirst,
+              color.AppColor.gradientFirst.withOpacity(0.9),
               color.AppColor.gradientSecond
             ],
             begin: const FractionalOffset(0.0, 0.4),
