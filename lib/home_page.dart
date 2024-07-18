@@ -24,10 +24,12 @@ class _HomePageState extends State<HomePage> {
               _buildSubtitleRow(),
               SizedBox(height: 20),
               _buildWorkoutCard(context),
-               SizedBox(height: 5),
-              _buildOverlapingCard(context),
+              SizedBox(height: 5),
+              _buildOverlappingCard(context),
+              SizedBox(height: 30),
               _buildFocusAreaContainer(context),
-              // _buildExpandedContainer(context)
+              SizedBox(height: 10),
+              _buildFocusAreaList(context), // Modified function
             ],
           ),
         ),
@@ -59,7 +61,7 @@ class _HomePageState extends State<HomePage> {
           Icons.arrow_back_ios,
           size: 20,
           color: color.AppColor.homePageIcons,
-        ), 
+        ),
         SizedBox(width: 10),
         Icon(
           Icons.calendar_month_outlined,
@@ -189,9 +191,9 @@ class _HomePageState extends State<HomePage> {
                       BoxShadow(
                         color: color.AppColor.gradientFirst,
                         blurRadius: 10,
-                        offset: Offset(4, 8)
-                      )
-                    ]
+                        offset: Offset(4, 8),
+                      ),
+                    ],
                   ),
                   child: Icon(
                     Icons.play_circle_fill,
@@ -207,50 +209,48 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Container _buildOverlapingCard(BuildContext context) {
-    
+  Container _buildOverlappingCard(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      height:180,
+      height: 180,
       child: Stack(
         children: [
           Container(
             margin: const EdgeInsets.only(top: 30),
-      width: MediaQuery.of(context).size.width,
-      height:120,    
-        decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        image: DecorationImage(
-        image: AssetImage("assets/card.jpg"),
-         fit: BoxFit.fill
-          ),
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 40,
-              offset: Offset(8, 10),
-              color: color.AppColor.gradientSecond.withOpacity(0.3)
+            width: MediaQuery.of(context).size.width,
+            height: 120,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              image: DecorationImage(
+                image: AssetImage("assets/card.jpg"),
+                fit: BoxFit.fill,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 40,
+                  offset: Offset(8, 10),
+                  color: color.AppColor.gradientSecond.withOpacity(0.3),
+                ),
+                BoxShadow(
+                  blurRadius: 10,
+                  offset: Offset(-1, -5),
+                  color: color.AppColor.gradientSecond.withOpacity(0.3),
+                ),
+              ],
             ),
-             BoxShadow(
-              blurRadius: 10,
-               offset: Offset(-1, -5),
-              color: color.AppColor.gradientSecond.withOpacity(0.3)
-            ),   
-          ]
-      ),    
-          )
-          ,Container(
+          ),
+          Container(
             height: 200,
             width: MediaQuery.of(context).size.width,
             margin: const EdgeInsets.only(right: 200, bottom: 30),
-          decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        image: DecorationImage(
-        image: AssetImage("assets/figure.png"),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              image: DecorationImage(
+                image: AssetImage("assets/figure.png"),
+              ),
+            ),
           ),
-
-      ),
-          ),
-          Container (
+          Container(
             width: double.maxFinite,
             height: 100,
             color: Color.fromARGB(255, 255, 255, 255),
@@ -263,72 +263,82 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
-                    color: color.AppColor.homePageDetail
+                    color: color.AppColor.homePageDetail,
                   ),
                 ),
-                SizedBox(height: 10,),
-               
-               RichText(
-                text: TextSpan(
-                text: "Keep it Up\n",
-                style: TextStyle(
-                  color: color.AppColor.homePagePlanColor,
-                  fontSize: 16,
-                  
+                SizedBox(height: 10),
+                RichText(
+                  text: TextSpan(
+                    text: "Keep it Up\n",
+                    style: TextStyle(
+                      color: color.AppColor.homePagePlanColor,
+                      fontSize: 16,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "stick to your plan",
+                      ),
+                    ],
+                  ),
                 ),
-                children: [
-                  TextSpan(
-                    text:"stick to your plan"
-                  )
-                ]
-               )
-               )
-
               ],
-            )
-          )
+            ),
+          ),
         ],
       ),
-      
-      
     );
   }
 
-Row _buildFocusAreaContainer (BuildContext context) {
-  return Row(
-    children: [
-      Text(
-        "Area of Focus",
-        style: TextStyle(
-          fontSize: 25,
-          fontWeight: FontWeight.w500,
-          color: color.AppColor.homePageTitle
+  Row _buildFocusAreaContainer(BuildContext context) {
+    return Row(
+      children: [
+        Text(
+          "Area of Focus",
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.w500,
+            color: color.AppColor.homePageTitle,
+          ),
         ),
-      )
-    ],
-  );
-}
+      ],
+    );
+  }
 
-Expanded _buildExpandedContainer(BuildContext context) {
-  return Expanded(
-    child: ListView.builder(
-      itemBuilder: (_, i){
-        return Row(
-          children: [
-            Container(
-              width: 200,
-              height: 170,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-                image: DecorationImage(
-                  image: AssetImage("assets/ex1.png")
+  Container _buildFocusAreaList(BuildContext context) {
+    return Container(
+      height: MediaQuery.sizeOf(context).height,
+      child: Expanded(
+        child: ListView.builder(
+          itemCount: 4,
+          itemBuilder: (_, i) {
+            return Row(
+              children: [
+                Container(
+                  width: 200,
+                  height: 170,
+                  decoration: BoxDecoration (
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    image: DecorationImage(
+                      image: AssetImage(
+                        "assets/ex1.png"
+                      )
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 3,
+                        offset: Offset(5, 5),
+                        color: color.AppColor.gradientSecond.withOpacity(0.1)
+                      )
+                  ]              
                   ),
-              ),
-            )
-          ],
-        );
-      }
+
+                )
+              ],
+            );
+          },
+        ),
       ),
-      );
-}
+    );
+  }
 }
