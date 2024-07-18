@@ -333,8 +333,9 @@ class _HomePageState extends State<HomePage> {
                   return Row(
                     children: [
                       Container(
-                        width: MediaQuery.of(context).size.width-90,
+                        width: (MediaQuery.of(context).size.width - 90)/2,
                         height: 170,
+                         margin: EdgeInsets.only(bottom: 15, left: 30),
                         padding: EdgeInsets.only(bottom: 5),
                         decoration: BoxDecoration (
                           color: Colors.white,
@@ -371,8 +372,9 @@ class _HomePageState extends State<HomePage> {
                      ),
                       ),
                       Container(
-                        width: 200,
+                        width: (MediaQuery.of(context).size.width - 90)/2,
                         height: 170,
+                        margin: EdgeInsets.only(bottom: 15, left: 30),
                         padding: EdgeInsets.only(bottom: 5),
                         decoration: BoxDecoration (
                           color: Colors.white,
