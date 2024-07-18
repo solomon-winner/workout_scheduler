@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'colors.dart' as color;
@@ -10,6 +12,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List info = [];
+  _initData() {
+    DefaultAssetBundle.of(context).loadString("json/info.json").then((value) => {
+      info = json.decode(value)
+    });
+  }
+  @override
+  void initState() {
+    super.initState();
+    _initData();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -307,54 +320,58 @@ class _HomePageState extends State<HomePage> {
   Container _buildFocusAreaList(BuildContext context) {
     return Container(
       height: MediaQuery.sizeOf(context).height,
-      child: Expanded(
-        child: ListView.builder(
-          itemCount: 4,
-          itemBuilder: (_, i) {
-            return Row(
-              children: [
-                Container(
-                  width: 200,
-                  height: 170,
-                  padding: EdgeInsets.only(bottom: 5),
-                  decoration: BoxDecoration (
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
-                      image: AssetImage(
-                        "assets/ex1.png"
-                      )
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        blurRadius: 3,
-                        offset: Offset(5, 5),
-                        color: color.AppColor.gradientSecond.withOpacity(0.1)
+      child: Row(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemCount: 4,
+              itemBuilder: (_, i) {
+                return Row(
+                  children: [
+                    Container(
+                      width: 200,
+                      height: 170,
+                      padding: EdgeInsets.only(bottom: 5),
+                      decoration: BoxDecoration (
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15),
+                        image: DecorationImage(
+                          image: AssetImage(
+                            "assets/ex1.png"
+                          )
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            blurRadius: 3,
+                            offset: Offset(5, 5),
+                            color: color.AppColor.gradientSecond.withOpacity(0.1)
+                          ),
+                                           BoxShadow(
+                            blurRadius: 3,
+                            offset: Offset(-5, -5),
+                            color: color.AppColor.gradientSecond.withOpacity(0.1)
+                          )
+                      ]              
                       ),
-                                       BoxShadow(
-                        blurRadius: 3,
-                        offset: Offset(-5, -5),
-                        color: color.AppColor.gradientSecond.withOpacity(0.1)
+                   child: Center(
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Text(
+                        "glues",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: color.AppColor.homePageDetail
+                        ),
                       )
-                  ]              
-                  ),
-               child: Center(
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Text(
-                    "glues",
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: color.AppColor.homePageDetail
                     ),
-                  )
-                ),
-               ),
-                )
-              ],
-            );
-          },
-        ),
+                   ),
+                    )
+                  ],
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
