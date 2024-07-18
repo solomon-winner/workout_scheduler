@@ -232,7 +232,7 @@ class _HomePageState extends State<HomePage> {
             ),
              BoxShadow(
               blurRadius: 10,
-              offset: Offset(-1, -5),
+               offset: Offset(-1, -5),
               color: color.AppColor.gradientSecond.withOpacity(0.3)
             ),   
           ]
