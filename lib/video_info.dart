@@ -27,8 +27,24 @@ class _VideoInfoState extends State<VideoInfo> {
         child: Column(
           children:[
             Container(
+              padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
               width:MediaQuery.of(context).size.width,
               height: 300,
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.arrow_back_ios,size: 20,
+                      color: color.AppColor.secondPageIconColor),
+                      Expanded(child: Container()),
+                      Icon(Icons.info_outline,size: 20,
+                      color: color.AppColor.secondPageIconColor,
+                     
+                      )
+                    ],
+                  )
+                ],
+              )
             )
           ]
         )
