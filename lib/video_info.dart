@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'colors.dart' as color;
+
 class VideoInfo extends StatefulWidget {
   const VideoInfo({super.key});
 
