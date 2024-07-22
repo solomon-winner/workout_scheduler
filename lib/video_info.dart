@@ -24,6 +24,14 @@ class _VideoInfoState extends State<VideoInfo> {
             end: Alignment.topRight
             )
         ),
+        child: Column(
+          children:[
+            Container(
+              width:MediaQuery.of(context).size.width,
+              height: 300,
+            )
+          ]
+        )
       ));
   }
 }
