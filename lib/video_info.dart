@@ -31,6 +31,8 @@ class _VideoInfoState extends State<VideoInfo> {
               width:MediaQuery.of(context).size.width,
               height: 300,
               child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+
                 children: [
                   Row(
                     children: [
@@ -42,7 +44,24 @@ class _VideoInfoState extends State<VideoInfo> {
                      
                       )
                     ],
-                  )
+                  ),
+
+            Text(
+              "Legs Toning",
+              style: TextStyle(
+                fontSize: 25,
+                color: color.AppColor.homePageContainerTextSmall,
+              ),
+            ),
+            SizedBox(height: 5),
+            Text(
+              "and Glutes workout",
+              style: TextStyle(
+                fontSize: 25,
+                color: color.AppColor.homePageContainerTextSmall,
+              ),
+            ),
+
                 ],
               )
             )
