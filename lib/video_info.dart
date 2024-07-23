@@ -134,8 +134,44 @@ class _VideoInfoState extends State<VideoInfo> {
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(60)
+                  topRight: Radius.circular(70)
                 )
+              ),
+              child: Column(
+                children: [
+                  SizedBox(height: 30,),
+                  Row(
+                    children: [
+                      SizedBox(width: 30,),
+                      Text(
+                        "Circuit 1: Legs Toning",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: color.AppColor.circuitsColor
+                        ),
+                      )
+                     , Expanded(child: Container())
+                      ,Row(
+                        children: [
+                          Icon(Icons.loop,
+                          size: 30,
+                          color: color.AppColor.loopColor,
+                          ),
+                          SizedBox(width: 10,),
+                          Text(
+                            "3 sets",
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: color.AppColor.setsColor
+                            ),
+                            )
+                        ],
+                      )
+                     , SizedBox(width: 20,)
+                    ],
+                  )
+                ],
               ),
             ))
           ]
