@@ -93,7 +93,7 @@ class _VideoInfoState extends State<VideoInfo> {
                       )
                     ],),
                 ),
-                SizedBox(width: 10,),
+                SizedBox(width: 20,),
                 Container(
                   width: 250,
                   height: 30,
@@ -125,9 +125,19 @@ class _VideoInfoState extends State<VideoInfo> {
                 )
               ],
             )
+                
+                
                 ],
               )
             )
+            ,Expanded(child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(60)
+                )
+              ),
+            ))
           ]
         )
       ));
