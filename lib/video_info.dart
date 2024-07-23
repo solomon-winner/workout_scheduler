@@ -78,6 +78,7 @@ class _VideoInfoState extends State<VideoInfo> {
                     )
                   ),
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.timer,size: 20,
                       color: color.AppColor.secondPageIconColor,
@@ -92,8 +93,9 @@ class _VideoInfoState extends State<VideoInfo> {
                       )
                     ],),
                 ),
-                                Container(
-                  width: 90,
+                SizedBox(width: 10,),
+                Container(
+                  width: 250,
                   height: 30,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -107,7 +109,17 @@ class _VideoInfoState extends State<VideoInfo> {
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.info_outline)
+                      Icon(Icons.handyman_outlined,
+                      color: color.AppColor.secondPageIconColor,
+                      ),
+                      SizedBox(width: 5,),
+                      Text(
+                        "Resistent band, Kettebell",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: color.AppColor.secondPageIconColor
+                        ),
+                      ),
                     ],
                   ),
                 )
