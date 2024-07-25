@@ -82,70 +82,78 @@ class _VideoInfoState extends State<VideoInfo> {
               ),
             ),
             SizedBox(height: 50),
-            Row(
-              children: [
-                Container(
-                  width: 90,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    gradient: LinearGradient(colors: [
-                      color.AppColor.secondPageContainerGradient1stColor,
-                      color.AppColor.secondPageContainerGradient2ndColor,
-                    ],
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight
-                    )
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                 Container(
+                      width: 90,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        gradient: LinearGradient(colors: [
+                          color.AppColor.secondPageContainerGradient1stColor,
+                          color.AppColor.secondPageContainerGradient2ndColor,
+                        ],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight
+                        )
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.timer,size: 20,
+                          color: color.AppColor.secondPageIconColor,
+                         
+                          ),
+                          SizedBox(width:5),
+                          Flexible(
+                            child: Text("68 min",
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: color.AppColor.secondPageIconColor
+                            ),
+                            ),
+                          )
+                        ],),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.timer,size: 20,
-                      color: color.AppColor.secondPageIconColor,
-                     
+                  SizedBox(width: 10,),
+                     Container(
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        gradient: LinearGradient(colors: [
+                          color.AppColor.secondPageContainerGradient1stColor,
+                          color.AppColor.secondPageContainerGradient2ndColor,
+                        ],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                        )
                       ),
-                      SizedBox(width:5),
-                      Text("68 min",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: color.AppColor.secondPageIconColor
+                      child: Row(
+
+                        children: [
+                          Icon(Icons.handyman_outlined,
+                          color: color.AppColor.secondPageIconColor,
+                          ),
+                          SizedBox(width: 3,),
+                          Flexible(
+                            child: Text(
+                              "Resistent band, Kettebell",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: color.AppColor.secondPageIconColor
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                      )
-                    ],),
-                ),
-                SizedBox(width: 20,),
-                Container(
-                  width: 250,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    gradient: LinearGradient(colors: [
-                      color.AppColor.secondPageContainerGradient1stColor,
-                      color.AppColor.secondPageContainerGradient2ndColor,
-                    ],
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                    )
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.handyman_outlined,
-                      color: color.AppColor.secondPageIconColor,
-                      ),
-                      SizedBox(width: 5,),
-                      Text(
-                        "Resistent band, Kettebell",
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: color.AppColor.secondPageIconColor
-                        ),
-                      ),
-                    ],
-                  ),
-                )
-              ],
+                    ),
+                ],
+              ),
             )
-                
+             ////////////   
                 
                 ],
               )
